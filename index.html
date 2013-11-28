@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>PBKDF2.NET by therealmagicmike</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>PBKDF2.NET</h1>
+        <h2>Adaptive PBKDF2 Library for the .NET Framework</h2>
+        <a href="https://github.com/therealmagicmike/PBKDF2.NET" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h3>
+<a name="pbkdf2net" class="anchor" href="#pbkdf2net"><span class="octicon octicon-link"></span></a>PBKDF2.NET</h3>
+
+<p>Adaptive Password-based Key Derivation Functionality (PBKDF2) can be difficult to implement on your own. Yet it is absolutely essential to ensure the integrity of your user's passwords. NSA and FIPS standards recommend the use of SHA256 at a minimum for PBKDF2 but the .NET Framework only uses SHA1 for their out-of-the-box implementation via the Rfc2898DerivedBytes class. For many developers, this can be undesired, while for others, this can simply be unacceptable.</p>
+
+<p>PBKDF2.NET addresses this obstacle by allowing you to choose the hashing routine that's right for you! This utility library extends the System.Security.Cryptography namespace by introducing the System.Security.Cryptography.PBKDF2 class. While carefully ensuring that the suggested pattern for PBKDF2 is adhered to, this utility library allows you to dynamically specify your HMAC of choice while still holding true to the .NET programming model for cryptographic procedures. This means that you can easily swap this implementation directly into place with any existing implementation from the .NET framework you may have with little to no refactoring of your code base.</p>
+
+<p>You are not limited to using the built-in .NET Framework HMAC implementations with the PBKDF2 class. You can use any type that inherits from System.Security.Cryptography.HMAC, including your own custom HMAC-based implementations. To use a custom implementation, simple register your type with the application domain (for example: via the CryptoConfig class) and you can use it's HashName value either in the constructor or within the PBKDF2Section configuration section. (see below)</p>
+
+<p>The library goes one step further by extending the System.Configuration namespace to include a robust configuration section specifically designed for the System.Security.Cryptography.PBKDF2 class:</p>
+
+<div class="highlight highlight-c#"><pre><span class="n">System</span><span class="p">.</span><span class="n">Configuration</span><span class="p">.</span><span class="n">PBKDF2Section</span>
+</pre></div>
+
+<p>The PBKDF2Section includes the following properties:</p>
+
+<div class="highlight highlight-c#"><pre><span class="k">public</span> <span class="kt">string</span> <span class="n">HashName</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="k">public</span> <span class="kt">int</span> <span class="n">IterationCount</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="k">public</span> <span class="kt">int</span> <span class="n">SaltSize</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+</pre></div>
+
+<p>The purpose of the PBKDF2Section class is to provide default settings for the PBKDF2 class. If you wish, you can specify the defaults you would like to use, and when initializing an instance of the PBKDF2 class you can omit the parameters from the constructor that you wish to use the default values for and the defaults will be initialized internally in the new instance for you.</p>
+
+<h3>
+<a name="licensing" class="anchor" href="#licensing"><span class="octicon octicon-link"></span></a>Licensing</h3>
+
+<p>This utility library is licensed under the MIT License.</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/therealmagicmike/PBKDF2.NET/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/therealmagicmike/PBKDF2.NET/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/therealmagicmike/PBKDF2.NET"></a> is maintained by <a href="https://github.com/therealmagicmike">therealmagicmike</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
