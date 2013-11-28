@@ -7,8 +7,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "net45", "net45", "{87196316
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PBKDF2.NET", "PBKDF2.NET\PBKDF2.NET.csproj", "{0D9D5552-C921-48C3-B24D-A31CD0432522}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PBKDF2.NET.Tests", "PBKDF2.NET.Tests\PBKDF2.NET.Tests.csproj", "{DCCE57A1-40BB-439C-AB34-30ABFFBD07E7}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,16 +17,11 @@ Global
 		{0D9D5552-C921-48C3-B24D-A31CD0432522}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D9D5552-C921-48C3-B24D-A31CD0432522}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D9D5552-C921-48C3-B24D-A31CD0432522}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DCCE57A1-40BB-439C-AB34-30ABFFBD07E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DCCE57A1-40BB-439C-AB34-30ABFFBD07E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DCCE57A1-40BB-439C-AB34-30ABFFBD07E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DCCE57A1-40BB-439C-AB34-30ABFFBD07E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0D9D5552-C921-48C3-B24D-A31CD0432522} = {87196316-22F5-4674-AA0C-0EE6FE5E76C0}
-		{DCCE57A1-40BB-439C-AB34-30ABFFBD07E7} = {87196316-22F5-4674-AA0C-0EE6FE5E76C0}
 	EndGlobalSection
 EndGlobal
