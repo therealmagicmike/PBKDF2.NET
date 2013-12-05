@@ -3,7 +3,8 @@ PBKDF2.NET
 
 The current source release version of PBKDF2.NET is v2.0.0
 
-The current binary release on Nuget.org is v1.0.1
+The current binary release is available on Nuget.org at:
+    http://www.nuget.org/packages/PBKDF2.NET/
 
 v2.0.0 brings a much cleaner and flexible interface and performance optimizations.
 The binary release via Nuget.org will be updated soon to reflect this update.
